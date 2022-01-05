@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./crowd-funding-product-page-main/images/Snapshot.png)
+![](./crowdfunding-product-page-main/images/Snapshot.png)
 
 
 
