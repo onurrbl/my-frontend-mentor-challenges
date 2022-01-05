@@ -19,7 +19,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./crowdfunding-product-page-main/images/Snapshot.png)
+![](https://github.com/onurrbl/my-frontend-mentor-challenges/blob/master/crowdfunding-product-page-main/images/Snapshot.png)
 
 
 
