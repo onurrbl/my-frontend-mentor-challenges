@@ -4,7 +4,7 @@ import Countries from './FilterCountries/Countries'
 
 const SectionMobile = () => {
     return (
-        <main>
+        <main className='w-full'>
             <SearchFilter></SearchFilter>
 
             <Countries></Countries>

@@ -31,3 +31,14 @@ code {
 .bg-vdb2{
   background-color: var(--DarkBlue);
 }
+
+.bg-vdb{
+  background-color: var(--VeryDarkBlue2);
+}
+
+.color-dgray{
+  color: var(--DarkGray);
+}
+.color-gray{
+  color: rgb(197, 197, 197);
+}
