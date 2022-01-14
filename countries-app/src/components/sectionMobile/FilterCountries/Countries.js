@@ -1,32 +1,18 @@
-import React ,{ useEffect, useState } from 'react'
+import React ,{  useState } from 'react'
+import { CountryContext } from '../../Contexts/CountryContxt'
 import Country from './Country'
 
 
 
 
 const Countries = () => {
-    const [Countries, setCountries] = useState([]) ;
-    const [isLoading, setIsLoading] = useState(true)
-    useEffect(() => {
-        fetch("https://restcountries.com/v2/all")
-          .then(res => res.json())
-          .then(
-            (result) => {
-                setCountries(result)
-                setIsLoading(false)
-            },    
-          )
-          .catch(error => {
-              console.log('Error: ', error)
-          })
-      }, [])
 
-      console.log(Countries);
-
+    const {Countries, isLoading} = React.useContext(CountryContext);
     return (
         <section className='w-full flex  justify-center  flex-wrap'>
            {
             isLoading ? 'loading' :   <>
+
             <Country country={Countries[9]} />
             <Country country={Countries[39]} />
             <Country country={Countries[59]} />
