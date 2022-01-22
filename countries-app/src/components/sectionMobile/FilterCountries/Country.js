@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Country = (props) => {
-    console.log(props.country);
+    
 
     return (
+        <Link to={`/country/${props.id}`}>
         <div className='cart w-80 m-6 bg-vdb2 rounded-md lg:m-12 '>
             <img src={props.country.flag} className='rounded-md object-cover w-full h-48 ' alt="" />
             <div className='p-8'>
@@ -16,6 +18,9 @@ const Country = (props) => {
             </div>
             
         </div>
+
+        </Link>
+
     )
 }
 

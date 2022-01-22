@@ -37,7 +37,7 @@ code {
 }
 
 .color-dgray{
-  color: var(--DarkGray);
+  background-color: var(--DarkGray);
 }
 .color-gray{
   color: rgb(197, 197, 197);
