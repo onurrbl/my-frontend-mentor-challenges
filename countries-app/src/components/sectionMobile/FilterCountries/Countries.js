@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { CountryContext } from '../../Contexts/CountryContxt'
 import { SearchFilterContext } from '../../Contexts/SearchAndFilterContext'
 import Country from './Country'
@@ -8,7 +8,7 @@ import Country from './Country'
 
 const Countries = () => {
     const {Search, Region} = React.useContext(SearchFilterContext)
-    const [searchParam] = useState(["capital", "name"]);
+    // const [searchParam] = useState(["capital", "name"]);
     const {Countries, isLoading} = React.useContext(CountryContext);
     const RegionCountries = Countries.filter((country) => {
         if(Region !== 'ALL'){
@@ -39,7 +39,7 @@ const Countries = () => {
 
                 FilteredCountries.map((country,i) => {
 
-                    return <Country country={country} key={i} id={i} />
+                    return <Country country={country} key={country.Id} id={country.Id} />
                 })
             }
             </>

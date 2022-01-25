@@ -2,7 +2,7 @@ import React from 'react'
 import { SearchFilterContext } from '../../../Contexts/SearchAndFilterContext'
 
 const SearchFilter = () => {
-    const {Search, SetSearch, Region, SetRegion} = React.useContext(SearchFilterContext)
+    const { SetSearch,  SetRegion} = React.useContext(SearchFilterContext)
     
     return (
         <div className='flex flex-wrap justify-between'>

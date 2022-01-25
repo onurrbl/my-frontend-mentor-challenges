@@ -8,15 +8,23 @@ import { CountryContext } from './components/Contexts/CountryContxt';
 import DetailCountry from './components/DetailedCountry/DetailCountry';
 
 function App() {
+  var myuniqueidcounter = -1;
+  
+  
   const [Countries, setCountries] = useState([]) ;
   const [isLoading, setIsLoading] = useState(true)
+  function uniqueId() {
+      myuniqueidcounter += 1
+      return myuniqueidcounter;
+  }
 
   useEffect(() => {
     fetch("https://restcountries.com/v2/all")
       .then(res => res.json())
       .then(
         (result) => {
-            setCountries(result)
+          let keyedData = result.map(value => Object.assign(value, { Id: uniqueId() }));
+            setCountries(keyedData)
             setIsLoading(false)
         },    
       )
