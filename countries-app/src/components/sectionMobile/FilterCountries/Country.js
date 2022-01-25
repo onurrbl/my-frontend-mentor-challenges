@@ -6,7 +6,7 @@ const Country = (props) => {
 
     return (
         <Link to={`/country/${props.id}`}>
-        <div className='cart w-80 m-6 bg-vdb2 rounded-md lg:m-12 '>
+        <div className='cart w-80 m-6 bg-vdb2 rounded-md lg:m-12 hover:scale-95'>
             <img src={props.country.flag} className='rounded-md object-cover w-full h-48 ' alt="" />
             <div className='p-8'>
             <h1 className='font-bold mb-3'>
