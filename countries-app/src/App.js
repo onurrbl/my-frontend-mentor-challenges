@@ -8,7 +8,7 @@ import { CountryContext } from './components/Contexts/CountryContxt';
 import DetailCountry from './components/DetailedCountry/DetailCountry';
 
 function App() {
-  var myuniqueidcounter = -1;
+  let myuniqueidcounter = -1;
   
   
   const [Countries, setCountries] = useState([]) ;

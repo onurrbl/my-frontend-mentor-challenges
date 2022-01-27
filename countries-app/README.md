@@ -3,8 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Frontend Mentor - REST Countries API solution
-![Crowdfunding Challenge Snapshot](https://github.com/onurrbl/my-frontend-mentor-challenges/blob/master/crowdfunding-product-page-main/images/Snapshot.png)
-
+![REST Countries API Challenge Snapshot](https://github.com/onurrbl/my-frontend-mentor-challenges/blob/master/countries-app/snapshots/screenshot.png)
 
 
 ### Links
