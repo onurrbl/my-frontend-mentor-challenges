@@ -3,8 +3,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Commissioner;
 }
 
 a {
@@ -18,19 +17,7 @@ a {
 }
 
 
-// ### Primary
 
-$Orange: hsl(26, 100%, 55%);
-$PaleOrange: hsl(25, 100%, 94%);
-
-// ### Neutral
-
-$VeryDarkBlue: hsl(220, 13%, 13%);
-$DarkGrayishBlue: hsl(219, 9%, 45%);
-$GrayishBlue: hsl(220, 14%, 75%);
-$LightGrayishBlue: hsl(223, 64%, 98%);
-$White: hsl(0, 0%, 100%);
-$BlackWith75opacity: hsl(0, 0%, 0%);
 
 .flex {
   display: flex;
@@ -40,4 +27,21 @@ $BlackWith75opacity: hsl(0, 0%, 0%);
 }
 .al-self-center {
   align-self: center;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.justify-center{
+  justify-content: center;
+}
+.al-center {
+  align-items: center;
+}
+.just-s-b {
+  justify-content: space-between;
+}
+.d-none {
+  display: none;
 }
