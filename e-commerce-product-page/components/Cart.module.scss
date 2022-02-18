@@ -1,0 +1,63 @@
+@use './/../styles/baseGlobals' as c;
+
+
+.cartCtn {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 5px 6px #ccc;
+    position: absolute;
+    width: 27rem;
+    right: 10px;
+    margin-top: 1rem;
+
+    .carthead{
+        border-bottom: 1px solid rgb(231, 229, 229);
+        h2 {
+            margin-left: 1.5rem;
+        }
+    }
+
+    .cartItem {
+        cursor: pointer;
+        display: flex;
+        color: c.$DarkGrayishBlue;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 1rem 0rem;
+    }
+    .cartItemBody {
+        display: flex;
+        flex-direction: column;
+
+        div:first-of-type {
+            height: 2rem;
+            display: flex;
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+    }
+    .imgWrapper {
+        box-sizing: content-box;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        div{
+            border-radius: 50%;
+        }
+    }
+    strong {
+        color: black;
+    }
+    .btnCtn {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+

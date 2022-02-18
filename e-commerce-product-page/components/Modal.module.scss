@@ -1,0 +1,18 @@
+.modalWindow {
+    position: fixed;
+    background-color: rgba(29, 25, 25, 0.687);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    // pointer-events: none;
+    transition: all 1s;
+}
+
+.modalActive {
+    visibility: visible !important;
+    opacity: 1;
+}
