@@ -1,0 +1,100 @@
+@use './/../styles/baseGlobals' as c;
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h3{
+        color: c.$Orange;
+    }
+
+    @media (min-width: c.$midScreen) {
+        flex-direction: row;
+    }
+}
+
+.imgSlider {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: c.$midScreen) {
+        width: 35%;
+
+    }
+}
+
+.productBody{
+    padding: 1rem;
+    
+    @media (min-width: c.$midScreen) {
+        font-size: 17px;
+        padding: 5rem;
+        width: 60%;
+    }
+}
+.quantityCtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: c.$midScreen) {
+        flex-direction: row;
+    }
+}
+.productPriceSection{
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    padding: 1rem;
+    font-weight: 400;
+    font-size: 20px;
+
+    @media (min-width: c.$midScreen) {
+        flex-direction: column;
+    }
+}
+
+.discountSpan {
+    border-radius: 3px;
+    padding: 2px;
+    background-color: c.$PaleOrange;
+    color: c.$Orange;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+.quantityController {
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: c.$LightGrayishBlue;
+    
+    button {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}
+
+.addCartBtnCtn{
+    margin-bottom: 5rem;
+    display: contents;
+}
+
+.controllerWrapper {
+    display: none;
+
+    @media (min-width: c.$midScreen) {
+        display: block;
+    }
+}

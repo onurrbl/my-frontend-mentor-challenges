@@ -17,7 +17,9 @@ a {
 }
 
 
-
+.bd {
+  border: 1px solid black;
+}
 
 .flex {
   display: flex;
@@ -42,6 +44,9 @@ a {
 .just-s-b {
   justify-content: space-between;
 }
+.just-s-evenly{
+  justify-content: space-evenly;
+}
 .d-none {
   display: none;
 }
@@ -50,4 +55,17 @@ a {
 }
 .bx-sizing-cb {
   box-sizing: content-box;
+}
+.color-gray {
+  color: gray;
+}
+
+.cancelled{
+  text-decoration: line-through;
+}
+
+main {
+  @media (min-width: 924px) {
+    margin: 5rem;
+}
 }

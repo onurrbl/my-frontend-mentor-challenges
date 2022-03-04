@@ -7,6 +7,15 @@
     border-radius: 0.5rem;
     color: white;
     width: 90%;
-
     cursor: pointer;
+    transition: all 100ms linear;
+
+    &:hover {
+        background-color: hsl(26, 89%, 45%);
+    }
+
+    &:active {
+        transform: scale(0.97);
+        background-color: c.$Orange;
+    }
 }

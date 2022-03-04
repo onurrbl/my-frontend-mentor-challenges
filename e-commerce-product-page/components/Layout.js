@@ -22,13 +22,16 @@ const Layout = ({ children }) => {
         onCartHandler={toggleCartHandler}
       />
       {isCartOpen ? <Cart /> : ""}
+      <Modal isMobileNavOpen={isMobileNavOpen}></Modal>
+      {
+        isMobileNavOpen ? 
 
-      <Modal isMobileNavOpen={isMobileNavOpen}>
+        <Sidebar
+          onMobileNavHandler={toggleMobileNavHandler}
+          isMobileNavOpen={isMobileNavOpen}
+        /> : ''
 
-      </Modal>
-          <Sidebar onMobileNavHandler={toggleMobileNavHandler} isMobileNavOpen={isMobileNavOpen} />{" "}
-
-      
+      }
       <main>{children}</main>
     </>
   );

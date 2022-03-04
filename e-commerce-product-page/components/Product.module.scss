@@ -1,0 +1,21 @@
+.productCtn {
+    min-width: 4rem;
+    max-width: 9rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 1rem;
+    padding: 10px;
+    margin: 2rem;
+}
+
+.productBody {
+    padding: 5px;
+
+    h1 {
+        font-size: 1rem;
+    }
+}

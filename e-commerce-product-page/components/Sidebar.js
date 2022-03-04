@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import icnModalClose from ".//../images/icon-close.svg";
 import Image from "next/image";
 import styles from './Sidebar.module.scss';
 import Modal from "./Modal";
 
 const Sidebar = (props) => {
+
+  const [trclass,setTrclass] = useState(`${styles.sidebarCtn} `);
+
+  useEffect(() => {
+    setTrclass(`${styles.sidebarCtn}  + ' ' + ${props.isMobileNavOpen ? styles.sbarActive : styles.sbarClose } `)
+  },[])
   return (
 
-
-      <section className={`${styles.sidebarCtn}  + ' ' + ${props.isMobileNavOpen ? styles.sbarActive : styles.sbarClose } `}>
+      <section className={trclass}>
       <div onClick={props.onMobileNavHandler}>
       <Image src={icnModalClose} alt="Modal-close" width={15} />
       </div>
