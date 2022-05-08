@@ -3,7 +3,6 @@ import productThb from "../images/image-product-1.jpg";
 import Image from "next/image";
 import styles from "./Product.module.scss";
 import Button from './Button';
-import icnCart from ".//../images/icon-cart.svg";
 
 const Product = () => {
   return (
