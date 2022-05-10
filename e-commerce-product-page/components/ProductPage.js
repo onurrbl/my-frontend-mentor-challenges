@@ -7,31 +7,29 @@ import minusIcn from "./../images/icon-minus.svg";
 import plusIcn from "./../images/icon-plus.svg";
 import SlideController from "./SlideController.js";
 
-const ProductPage = () => {
+const ProductPage = ( { product }) => {
   return (
     <div className={styles.product}>
       <div className={styles.imgSlider}>
-        <Image src={prImg} alt="product-image" width={1000} />
+        <Image src={product.image} alt="product-image" width={1000} height={1000}/>
         <div className={styles.controllerWrapper}>
-        <SlideController></SlideController>
+        {/* <SlideController></SlideController> */}
         </div>
       </div>
       <div className={styles.productBody}>
         <h3>SNEAKER COMPANY</h3>
-        <h1>Fall Limited Edition Sneakers</h1>
+        <h1>{product.title}</h1>
         <p className="product-desc color-gray">
-          These low-profile sneakers are your perfect casual wear companion.
-          Featuring a durable rubber outer sole, theyll withstand everything the
-          weather can offer
+          {product.description}
         </p>
         <div className={styles.productPriceSection}>
           <div className="flex">
             <span>
-              <strong>$125.00</strong>
+              <strong>{product.price}</strong>
             </span>
             <span className={styles.discountSpan}>50%</span>
           </div>
-          <span className="color-gray cancelled">$250.00</span>
+          <span className="color-gray cancelled">{product.price * 2}</span>
         </div>
         <div className={styles.quantityCtn}>
           <div className={styles.quantityController}>

@@ -5,44 +5,44 @@ import imgAvatar from ".//../images/image-avatar.png";
 import icnCart from ".//../images/icon-cart.svg";
 import icnMenu from ".//../images/icon-menu.svg";
 import styles from "./Navbar.module.scss";
-
+import Link from "next/link";
 
 const Navbar = (props) => {
   return (
     <nav className={styles.navbar}>
-        <div className="flex al-center justify-center ">
-   
+      <div className="flex al-center justify-center ">
         <button onClick={props.onMobileNavHandler}>
           {" "}
           <Image alt="navMenu" src={icnMenu}></Image>
         </button>
 
         <div className="flex ">
-          <div className="justify-center al-center flex ">
-          <Image
-            src={logo}
-            alt="logo"
-            width={140}
-            height={20}
-            className="al-self-center"
-          ></Image>
-
+          <div className="justify-center al-center cursor-p flex ">
+            <Link href="/" passHref>
+              <Image
+                src={logo}
+                alt="logo"
+                width={140}
+                height={20}
+                className="al-self-center"
+              ></Image>
+            </Link>
           </div>
-      <ul >
-        <li>Collection</li>
-        <li>Men</li>
-        <li>Women</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
+          <ul>
+            <li>
+              <Link href="/">Collection </Link>{" "}
+            </li>
+            <li>Men</li>
+            <li>Women</li>
+            <li>About</li>
+            <li>Contact</li>
+          </ul>
         </div>
       </div>
 
-
-
       <div className="flex al-center cart-ctn">
         <div className={styles.img} onClick={props.onCartHandler}>
-          <Image src={icnCart}  alt="cart"></Image>
+          <Image src={icnCart} alt="cart"></Image>
         </div>
 
         <div>

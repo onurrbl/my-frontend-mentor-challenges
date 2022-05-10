@@ -1,25 +1,27 @@
 import React from "react";
-import productThb from "../images/image-product-1.jpg";
 import Image from "next/image";
 import styles from "./Product.module.scss";
 import Button from './Button';
+import Link from 'next/link'
 
-const Product = () => {
+const Product = ( { product }) => {
   return (
+    <Link href={`/product/${product.id}`} passHref>
+    
     <div className={styles.productCtn}>
       <div>
         {" "}
         <Image
-          src={productThb}
+          src={product.image}
           alt="product thumbnail"
           width={400}
           height={400}
         />
       </div>
       <div className={styles.productBody}>
-        <h1>Fall Limited Editions Sneaker</h1>
+        <h1>{product.title}r</h1>
         <div className="flex">
-        <span>125.00</span>
+        <span>{product.price}</span>
         <Button cart={true} />
 
         </div>
@@ -27,6 +29,7 @@ const Product = () => {
       </div>
 
     </div>
+    </Link>
   );
 };
 
