@@ -1,13 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Button from "./Button.js";
-import prImg from "./../images/image-product-1.jpg";
 import styles from "./ProductPage.module.scss";
 import minusIcn from "./../images/icon-minus.svg";
 import plusIcn from "./../images/icon-plus.svg";
-import SlideController from "./SlideController.js";
+import { useDispatch } from "react-redux";
+import { addProductToCart } from "../slices/cartSlice.js";
+// import SlideController from "./SlideController.js";
 
 const ProductPage = ( { product }) => {
+  const dispatch = useDispatch()
+  const [amount, SetAmount] = useState(1)
+
+  const minusAmountHandler = () => {
+    if( amount !== 0){
+      SetAmount(amount - 1)
+    }
+  }
+ 
+  const plusAmountHandler = () => {
+    SetAmount(amount + 1)
+  }
+
+  const onCartButtonClick = () => {
+    const {id, image, title, price } = product
+    dispatch(addProductToCart({id, image , title, price, amount}))
+  }
+
+
   return (
     <div className={styles.product}>
       <div className={styles.imgSlider}>
@@ -33,18 +53,18 @@ const ProductPage = ( { product }) => {
         </div>
         <div className={styles.quantityCtn}>
           <div className={styles.quantityController}>
-            <button className="minus">
+            <button onClick={minusAmountHandler} className="minus">
               <Image src={minusIcn} alt="minus" width={20} height={7} />{" "}
             </button>
 
             <span>
-              <strong>2</strong>
+              <strong >{amount}</strong>
             </span>
-            <button className="plus">
+            <button onClick={plusAmountHandler} className="plus">
               <Image src={plusIcn} alt="plus" width={20} height={20} />{" "}
             </button>
           </div>
-          <Button text={"AddtoCart"} />
+          <Button text={"AddtoCart"} onClick={onCartButtonClick} />
         </div>
       </div>
     </div>

@@ -3,12 +3,22 @@ import Image from "next/image";
 import styles from "./Product.module.scss";
 import Button from './Button';
 import Link from 'next/link'
+import { useDispatch } from "react-redux";
+import { addProductToCart } from "../slices/cartSlice";
 
 const Product = ( { product }) => {
+  const dispatch = useDispatch()
+
+  const onCartButtonClick = () => {
+    const amount = 1
+    const {id, image, title, price } = product
+    dispatch(addProductToCart({id, image , title, price, amount,}))
+  }
+
+
   return (
-    <Link href={`/product/${product.id}`} passHref>
-    
     <div className={styles.productCtn}>
+      <Link href={`/product/${product.id}`} passHref>
       <div>
         {" "}
         <Image
@@ -18,18 +28,18 @@ const Product = ( { product }) => {
           height={400}
         />
       </div>
+    </Link>
       <div className={styles.productBody}>
-        <h1>{product.title}r</h1>
+        <h1>{product.title}</h1>
         <div className="flex">
         <span>{product.price}</span>
-        <Button cart={true} />
+        <Button cart={true} onClick={onCartButtonClick}/>
 
         </div>
 
       </div>
 
     </div>
-    </Link>
   );
 };
 

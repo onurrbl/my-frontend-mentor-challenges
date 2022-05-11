@@ -5,9 +5,9 @@ import Image from 'next/image';
 
 const Button = (props) => {
 
-  // Should have used props.children yeah somehow i forgot
+  // Should have used props.children yeah somehow i forgot i will refactor later
   return (
-    <button className={styles.btn} onClick={props.onCllick} >
+    <button className={styles.btn} onClick={props.onClick} >
         {
           props.text ? 
           <h1>{props.text}</h1> : ''

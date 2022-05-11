@@ -1,10 +1,9 @@
-import { configureStore } from "@reduxjs/toolkit"
+import { configureStore, createReducer } from '@reduxjs/toolkit'
+import cartReducer from '../slices/cartSlice'
 
-const createStore = (preloadedState) => {
-    return configureStore({
-        reducer: {
-            nextRepo: nextSlice,
-        },
-        preloadedState,
-    })
-}
+export default configureStore({
+  reducer: {
+    cart: cartReducer,
+  }
+})
+
