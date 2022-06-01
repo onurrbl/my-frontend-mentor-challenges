@@ -6,8 +6,24 @@ import icnCart from ".//../images/icon-cart.svg";
 import icnMenu from ".//../images/icon-menu.svg";
 import styles from "./Navbar.module.scss";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { changeFilter, changeTheme } from "../slices/filterSlice";
 
 const Navbar = (props) => {
+  const dispatch = useDispatch();
+  const currentTheme = useSelector((state) => state.filter.theme);
+  const currentFilter = useSelector((state) => state.filter.filter);
+
+  const filterChangeHandler = (e) => {
+    const filter = e.target.getAttribute("value");
+    dispatch(changeFilter(filter));
+  };
+
+  const themeChangeHandler = () => {
+    let theme;
+    currentTheme === "dark" ? (theme = "light") : (theme = "dark");
+    dispatch(changeTheme(theme));
+  };
   return (
     <nav className={styles.navbar}>
       <div className="flex al-center justify-center ">
@@ -29,15 +45,35 @@ const Navbar = (props) => {
             </Link>
           </div>
           <ul>
-            <li>
-              <Link href="/">Collection </Link>{" "}
+            <li  onClick={filterChangeHandler} value="all">
+              Collection
+              {currentFilter === 'all' ? <div className={styles.current_nav}></div> : ''}
+
             </li>
-            <li>Men</li>
-            <li>Women</li>
+            <li onClick={filterChangeHandler} value="men's clothing">
+              Men
+              {currentFilter === `men's clothing` ? <div className={styles.current_nav}></div> : ''}
+            </li>
+            <li onClick={filterChangeHandler} value="women's clothing">
+              Women
+              {currentFilter === `women's clothing` ? <div className={styles.current_nav}></div> : ''}
+            </li>
             <li>About</li>
             <li>Contact</li>
           </ul>
         </div>
+      </div>
+
+      <div className={styles.theme_switch_wrapper}>
+        <label
+          className="theme-switch"
+          htmlFor="checkbox"
+        >
+          {/* <label onClick={props.onThemeToggle} className="theme-switch" htmlFor="checkbox"> */}
+          <input onClick={themeChangeHandler} type="checkbox" id="checkbox" />
+          <div className={styles.slider}></div>
+        </label>
+        <em>Enable Dark Mode!</em>
       </div>
 
       <div className="flex al-center cart-ctn">
@@ -59,4 +95,4 @@ const Navbar = (props) => {
   );
 };
 
-export default Navbar;
+export default React.memo(Navbar);

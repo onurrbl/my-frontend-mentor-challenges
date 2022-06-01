@@ -4,6 +4,15 @@ body {
   padding: 0;
   margin: 0;
   font-family: Commissioner;
+
+
+  [data-theme="dark"] {
+    background-color: #232b2b;
+    color: white ;
+    --product-item-darkmode-color : #353839;
+    min-height: 100vh;
+  }
+
 }
 
 a {

@@ -5,7 +5,7 @@ export default function Home( { products }) {
   
   return (
     <>
-      <ProductsList products={products}/>
+      <ProductsList data-theme='dark' products={products}/>
     </>
   )
 }

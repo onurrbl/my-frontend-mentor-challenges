@@ -1,63 +1,132 @@
-@use './/../styles/baseGlobals' as c;
+@use ".//../styles/baseGlobals" as c;
 .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
-    border-bottom: 0.01px solid rgb(212, 209, 209);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 0.01px solid rgb(212, 209, 209);
 
-    button {
-        background-color: transparent;
-        border: 0;
-        cursor: pointer;
-        margin-right: 1rem;
+  button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  ul {
+    margin-bottom: 0px;
+    list-style: none;
+    display: none;
+  }
+  li {
+    display: inline-block;
+    margin: 0rem 1rem;
+    // color: c.$DarkGrayishBlue;
+    cursor: pointer;
+    transition: border-bottom 4s ease-in-out;
+    padding: 1.5rem;
+
+    &:after {
+      content: "";
+      margin-top: 1.4rem;
+      display: block;
+      position: absolute;
+      width: 0;
+      height: 4px;
+      background: c.$Orange;
+      transition: width 0.1s;
     }
-    ul {
-        margin-bottom: 0px;
-        list-style: none;
-        display:  none ;
-    }
-    li {
-        display: inline-block;
-        margin: 0rem 1rem;
-        color: c.$DarkGrayishBlue;
-        cursor: pointer;
-        transition: border-bottom 4s ease-in-out;
-        padding: 1.5rem;
- 
-        &:after {
-            content: '';
-            margin-top: 1.4rem;
-            display: block;
-            position: absolute;
-            width: 0;
-            height: 4px;
-            background: c.$Orange;
-            transition: width 0.1s;
-        }
-        
-        &:hover:after {
-            width: 60px;
-        }
+
+    &:hover:after {
+      width: 60px;
     }
 
     
-    @media (min-width: c.$midScreen) {
-        margin: 0 10rem;
-        padding: 0rem;
-        button {
-            display: none;
-        }
-        ul {
-            display: flex;
-            
-        }
     }
+
+    .current_nav {
+      
+
+        content: "";
+        margin-top: 1.4rem;
+        display: block;
+        position: absolute;
+        width: 0;
+        height: 4px;
+        background: c.$Orange;
+        transition: width 0.1s;
+        width: 60px;
+    
+
+  }
+
+  @media (min-width: c.$midScreen) {
+    margin: 0 10rem;
+    padding: 0rem;
+    button {
+      display: none;
+    }
+    ul {
+      display: flex;
+    }
+  }
 }
 
 .img {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 2rem;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2rem;
+  cursor: pointer;
 }
+
+.theme_switch_wrapper {
+  display: flex;
+  align-items: center;
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+
+  label {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+
+    input {
+      display: none;
+
+      &:checked + .slider{
+        background-color: c.$Orange;
+      }
+      &:checked + .slider:before{
+        transform: translateX(26px);
+      }
+    }
+  }
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  border-radius: 34px;
+
+  &:before{
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+    border-radius: 50%;
+  }
+}
+
