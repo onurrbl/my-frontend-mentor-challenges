@@ -1,7 +1,8 @@
 @use ".//../styles/baseGlobals" as c;
 
 .cartCtn {
-  background-color: white;
+  background-color: var(--sidebar-darkmode-color);
+  // background-color: #fff;
   border-radius: 1rem;
   box-shadow: 3px 3px 5px 6px #ccc;
   position: absolute;
@@ -23,6 +24,7 @@
     justify-content: space-evenly;
     align-items: center;
     margin: 1rem 0rem;
+    color: inherit;
   }
   .cartItemBody {
     display: flex;

@@ -1,18 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: Commissioner;
 
+  --sidebar-darkmode-color: #fff;
 
   [data-theme="dark"] {
     background-color: #232b2b;
-    color: white ;
-    --product-item-darkmode-color : #353839;
+    color: white;
+    --product-item-darkmode-color: #353839;
+    --sidebar-darkmode-color: #353839;
     min-height: 100vh;
   }
 
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none !important;
+  }
+
+  :focus {
+    outline: none !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: orange;
+    width: 30rem;
+  }
 }
 
 a {
@@ -20,11 +41,17 @@ a {
   text-decoration: none;
 }
 
+*{
+  &:focus {
+
+    outline: none !important;
+  }
+}
 
 * {
   box-sizing: border-box;
+  outline: none;
 }
-
 
 .bd {
   border: 1px solid black;
@@ -33,7 +60,7 @@ a {
 .flex {
   display: flex;
 }
-.f-col{
+.f-col {
   flex-direction: column;
 }
 .al-self-center {
@@ -44,7 +71,7 @@ a {
   list-style: none;
 }
 
-.justify-center{
+.justify-center {
   justify-content: center;
 }
 .al-center {
@@ -53,13 +80,13 @@ a {
 .just-s-b {
   justify-content: space-between;
 }
-.just-s-evenly{
+.just-s-evenly {
   justify-content: space-evenly;
 }
 .d-none {
   display: none;
 }
-.br-rd{
+.br-rd {
   border-radius: 1rem;
 }
 .bx-sizing-cb {
@@ -69,16 +96,20 @@ a {
   color: gray;
 }
 
-.cancelled{
+.cancelled {
   text-decoration: line-through;
 }
 
 main {
   @media (min-width: 924px) {
     margin: 5rem;
-}
+  }
 }
 
-.cursor-p{
+.cursor-p {
   cursor: pointer;
+}
+
+:focus {
+  outline: none !important;
 }

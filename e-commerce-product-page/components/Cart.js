@@ -34,8 +34,8 @@ const Cart = () => {
                   <p maxLength="24">{product.title.substring(0, 25)}</p>
                 </div>
                 <div>
-                  <span>{product.price}</span> x <span> {product.amount}</span>{" "}
-                  <strong>{product.price * product.amount}</strong>
+                  <span>${product.price}</span> x <span> {product.amount}</span>{" "}
+                  <strong>${product.price * product.amount}</strong>
                 </div>
               </div>
               <div

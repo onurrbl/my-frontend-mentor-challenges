@@ -1,26 +1,71 @@
 .productCtn {
-    min-width: 4rem;
-    max-width: 9rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 1rem;
-    padding: 10px;
-    margin: 2rem;
-    background-color:  var(--product-item-darkmode-color);
+  min-width: 4rem;
+  max-width: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 1rem;
+  padding: 10px;
+  margin: 2rem;
+  background-color: var(--product-item-darkmode-color);
 }
 
-.productCtn  div:first-of-type{
-    cursor: pointer;
+.productCtn div:first-of-type {
+  cursor: pointer;
 }
 
 .productBody {
-    padding: 5px;
+  padding: 5px;
 
-    h1 {
-        font-size: 1rem;
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+.imgIconWrapper{
+
+    &:hover .imageHover {
+        opacity: .5;
+    }
+    &:hover .fontAwesomeIcon {
+        opacity: .5;
+    }
+    &:active .fontAwesomeIcon {
+        transform: scale(1.3);
     }
 }
+.imageHover {
+  position: absolute;
+  z-index: 3;
+  border-radius: 3px;
+  background-color: black;
+  padding: 4rem;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+
+}
+
+.fontAwesomeIcon {
+  opacity: 0;
+  position: absolute;
+  z-index: 4;
+  font-size: 3rem;
+  color: white;
+  margin-left: 2.5rem;
+  margin-top: 2.5rem;
+  transition: opacity 200ms ease-in-out;
+
+
+}
+
+.prImage {
+  position: absolute;
+  z-index: 30;
+  width: 10rem;
+  padding: 2rem;
+}
+
+

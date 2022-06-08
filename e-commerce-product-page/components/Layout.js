@@ -4,6 +4,7 @@ import Cart from "./Cart";
 import Modal from "./Modal";
 import Sidebar from "./Sidebar";
 import { useSelector } from "react-redux";
+import NewSidebar from "./NewSidebar";
 
 const Layout = ({ children }) => {
   const [isCartOpen, SetIsCartOpen] = useState(false);
@@ -38,6 +39,7 @@ const Layout = ({ children }) => {
       ) : (
         ""
       )}
+      {/* <NewSidebar/> */}
       <main>{children}</main>
     </div>
   );

@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import icnModalClose from ".//../images/icon-close.svg";
 import Image from "next/image";
 import styles from './Sidebar.module.scss';
-import Modal from "./Modal";
 
 const Sidebar = (props) => {
 
