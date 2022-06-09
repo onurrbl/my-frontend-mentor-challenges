@@ -60,6 +60,12 @@ a {
 .flex {
   display: flex;
 }
+.flex-1 {
+  flex: 1;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
 .f-col {
   flex-direction: column;
 }

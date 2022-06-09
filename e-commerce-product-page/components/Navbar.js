@@ -13,6 +13,7 @@ const Navbar = (props) => {
   const dispatch = useDispatch()
   const currentTheme = useSelector((state) => state.filter.theme)
   const currentFilter = useSelector((state) => state.filter.filter)
+  const cartProductsAmount = useSelector((state) => state.cart.length)
 
   const filterChangeHandler = (e) => {
     const filter = e.target.getAttribute("value")
@@ -77,16 +78,19 @@ const Navbar = (props) => {
 
       <div className={styles.theme_switch_wrapper}>
         <label className="theme-switch" htmlFor="checkbox">
-          {/* <label onClick={props.onThemeToggle} className="theme-switch" htmlFor="checkbox"> */}
           <input onClick={themeChangeHandler} type="checkbox" id="checkbox" />
           <div className={styles.slider}></div>
         </label>
-        {/* <em>Enable Dark Mode!</em> */}
       </div>
 
       <div className="flex al-center cart-ctn">
         <div className={styles.img} onClick={props.onCartHandler}>
-          <Image src={icnCart} alt="cart"></Image>
+          {cartProductsAmount > 0 && (
+            <div className={styles.cartItemAmount}>
+              <span>{cartProductsAmount}</span>
+            </div>
+          )}
+          <Image src={icnCart} width={30} height={30} alt="cart"></Image>
         </div>
 
         <div>

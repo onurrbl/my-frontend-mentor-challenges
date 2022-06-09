@@ -1,28 +1,25 @@
-import React, { useEffect, useRef, useState } from "react";
-import Navbar from "./Navbar";
-import Cart from "./Cart";
-import Modal from "./Modal";
-import Sidebar from "./Sidebar";
-import { useSelector } from "react-redux";
-import NewSidebar from "./NewSidebar";
+import React, { useEffect, useRef, useState } from "react"
+import Navbar from "./Navbar"
+import Cart from "./Cart"
+import Modal from "./Modal"
+import Sidebar from "./Sidebar"
+import { useSelector } from "react-redux"
+import NewSidebar from "./NewSidebar"
 
 const Layout = ({ children }) => {
-  const [isCartOpen, SetIsCartOpen] = useState(false);
-  const [isMobileNavOpen, SetIsMobileNavOpen] = useState(false);
-  const darkMode = useSelector(state => state.filter.theme)
-  
+  const [isCartOpen, SetIsCartOpen] = useState(false)
+  const [isMobileNavOpen, SetIsMobileNavOpen] = useState(false)
+  const darkMode = useSelector((state) => state.filter.theme)
 
   const toggleCartHandler = () => {
-    SetIsCartOpen(!isCartOpen);
-  };
-
+    SetIsCartOpen(!isCartOpen)
+  }
 
   const toggleMobileNavHandler = () => {
-    SetIsMobileNavOpen(!isMobileNavOpen);
-  };
+    SetIsMobileNavOpen(!isMobileNavOpen)
+  }
 
-
-  const theme = darkMode === 'dark' ? "dark" : "light";
+  const theme = darkMode === "dark" ? "dark" : "light"
   return (
     <div className="theme-wrapper" data-theme={theme}>
       <Navbar
@@ -39,10 +36,9 @@ const Layout = ({ children }) => {
       ) : (
         ""
       )}
-      {/* <NewSidebar/> */}
       <main>{children}</main>
     </div>
-  );
-};
+  )
+}
 
-export default React.memo(Layout);
+export default React.memo(Layout)

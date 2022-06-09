@@ -4,7 +4,10 @@ import ProductsList from '../components/ProductsList'
 export default function Home( { products }) {
   
   return (
-    <>
+    <>      <Head>
+    <title>E-Commerce App</title>
+    <meta property="og:title" content="E-Commerce App" key="title" />
+  </Head>
       <ProductsList data-theme='dark' products={products}/>
     </>
   )

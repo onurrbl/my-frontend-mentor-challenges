@@ -23,17 +23,21 @@ const NewSidebar = () => {
   return (
     <div className={styles.sidebarContainer}>
       <ul>
-        {/* <li><FontAwesomeIcon shake icon={faPerson}/></li>
-            <li><FontAwesomeIcon fade icon={faPersonDress}/></li>
-            <li><FontAwesomeIcon spin  icon={faLaptop}/></li>
-            <li><FontAwesomeIcon bounce icon={faGem}/></li>
-            <li><FontAwesomeIcon beat icon={faPerson}/></li> */}
-
         <li onClick={filterChangeHandler} value="all">
-          <FontAwesomeIcon value="all" shake={currentFilter === 'all'} size="lg" icon={faAlignCenter} />
+          <FontAwesomeIcon
+            value="all"
+            shake={currentFilter === "all"}
+            size="lg"
+            icon={faAlignCenter}
+          />
         </li>
         <li onClick={filterChangeHandler} value="men's clothing">
-          <FontAwesomeIcon value="men's clothing" shake={currentFilter === "men's clothing"} size="lg" icon={faPerson} />
+          <FontAwesomeIcon
+            value="men's clothing"
+            shake={currentFilter === "men's clothing"}
+            size="lg"
+            icon={faPerson}
+          />
         </li>
         <li onClick={filterChangeHandler} value="women's clothing">
           <FontAwesomeIcon
@@ -44,10 +48,20 @@ const NewSidebar = () => {
           />
         </li>
         <li onClick={filterChangeHandler} value="electronics">
-          <FontAwesomeIcon value="electronics" shake={currentFilter === "electronics"} size="sm" icon={faLaptop} />
+          <FontAwesomeIcon
+            value="electronics"
+            shake={currentFilter === "electronics"}
+            size="sm"
+            icon={faLaptop}
+          />
         </li>
         <li onClick={filterChangeHandler} value="jewelery">
-          <FontAwesomeIcon value="jewelery" shake={currentFilter ==="jewelery"} size="sm" icon={faGem} />
+          <FontAwesomeIcon
+            value="jewelery"
+            shake={currentFilter === "jewelery"}
+            size="sm"
+            icon={faGem}
+          />
         </li>
       </ul>
     </div>

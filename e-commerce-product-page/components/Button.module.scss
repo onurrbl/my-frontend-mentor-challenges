@@ -2,7 +2,7 @@
 
 
 .btn {
-    background-color: c.$Orange;
+    background-color: rgba(255, 166, 0, 0.946);
     border: 0;
     border-radius: 0.5rem;
     color: white;
@@ -11,14 +11,15 @@
     transition: all 100ms linear;
 
     &:hover {
-        background-color: hsl(26, 89%, 45%);
+        background-color: rgb(244, 212, 151);
     }
 
     &:active {
-        transform: scale(0.97);
-        background-color: c.$Orange;
+        transform: scale(0.95);
+        background-color: orange;
     }
     &:focus {
         outline: none !important;
     }
 }
+

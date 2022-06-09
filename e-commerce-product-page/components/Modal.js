@@ -1,10 +1,14 @@
-import React from 'react'
-import styles from './Modal.module.scss';
+import React from "react"
+import styles from "./Modal.module.scss"
 
-const Modal = (props,{children}) => {
+const Modal = (props, { children }) => {
   return (
-    <div className={`${styles.modalWindow}  ${props.isMobileNavOpen ? styles.modalActive : ''}`}  >
-        {children}
+    <div
+      className={`${styles.modalWindow}  ${
+        props.isMobileNavOpen ? styles.modalActive : ""
+      }`}
+    >
+      {children}
     </div>
   )
 }

@@ -3,6 +3,7 @@
 .sidebarContainer {
     display: flex ;
     position: fixed;
+    z-index: 1;
     background-color: c.$Orange;
     // width: 3rem;
     margin-top: 10rem;

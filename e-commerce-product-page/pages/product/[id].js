@@ -1,6 +1,5 @@
 import React from 'react'
 import ProductPage from '../../components/ProductPage'
-import { useRouter } from 'next/router'
 
 const index = ( { product }) => {
 

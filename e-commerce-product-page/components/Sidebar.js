@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from "react";
-import icnModalClose from ".//../images/icon-close.svg";
-import Image from "next/image";
-import styles from './Sidebar.module.scss';
+import React, { useEffect, useState } from "react"
+import icnModalClose from ".//../images/icon-close.svg"
+import Image from "next/image"
+import styles from "./Sidebar.module.scss"
 
 const Sidebar = (props) => {
-
-  const [trclass,setTrclass] = useState(`${styles.sidebarCtn} `);
+  const [trclass, setTrclass] = useState(`${styles.sidebarCtn} `)
 
   useEffect(() => {
-    setTrclass(`${styles.sidebarCtn}  + ' ' + ${props.isMobileNavOpen ? styles.sbarActive : styles.sbarClose } `)
-  },[])
+    setTrclass(
+      `${styles.sidebarCtn}  + ' ' + ${
+        props.isMobileNavOpen ? styles.sbarActive : styles.sbarClose
+      } `
+    )
+  }, [])
   return (
-
-      <section className={trclass}>
+    <section className={trclass}>
       <div onClick={props.onMobileNavHandler}>
-      <Image src={icnModalClose} alt="Modal-close" width={15} />
+        <Image src={icnModalClose} alt="Modal-close" width={15} />
       </div>
       <ul>
         <li>Collections</li>
@@ -24,9 +26,7 @@ const Sidebar = (props) => {
         <li>Contact</li>
       </ul>
     </section>
+  )
+}
 
-
-  );
-};
-
-export default React.memo(Sidebar);
+export default React.memo(Sidebar)
