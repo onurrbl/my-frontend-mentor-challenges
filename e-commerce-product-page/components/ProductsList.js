@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useSelector } from "react-redux"
-import Product from "./product"
+import Product from "./Product"
 import styles from "./ProductsList.module.scss"
 import NewSidebar from "./NewSidebar"
 
