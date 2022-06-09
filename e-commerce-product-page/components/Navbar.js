@@ -36,6 +36,8 @@ const Navbar = (props) => {
         <div className="flex ">
           <div className="justify-center al-center cursor-p flex ">
             <Link href="/" passHref>
+              <a>
+
               <Image
                 src={logo}
                 alt="logo"
@@ -43,6 +45,7 @@ const Navbar = (props) => {
                 height={20}
                 className="al-self-center"
               ></Image>
+              </a>
             </Link>
           </div>
           <ul>
